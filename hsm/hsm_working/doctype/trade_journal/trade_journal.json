@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-14 18:40:54.329308",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "strategy_used",
+  "column_break_ydrsq",
+  "starting_date",
+  "end_date",
+  "section_break_pnhml",
+  "total_trades",
+  "column_break_krsua",
+  "risk_to_reward",
+  "column_break_9xgtp",
+  "allowed_lot_size",
+  "section_break_7borw",
+  "trade_summary",
+  "section_break_rikuk",
+  "charges_till_date",
+  "column_break_c0gnb",
+  "gross_result",
+  "column_break_qubiz",
+  "net_outcome"
+ ],
+ "fields": [
+  {
+   "fieldname": "strategy_used",
+   "fieldtype": "Link",
+   "label": "Strategy Used",
+   "options": "Strategy Builder"
+  },
+  {
+   "fieldname": "total_trades",
+   "fieldtype": "Int",
+   "label": "Total Trades"
+  },
+  {
+   "fieldname": "risk_to_reward",
+   "fieldtype": "Data",
+   "label": "Risk to Reward"
+  },
+  {
+   "fieldname": "allowed_lot_size",
+   "fieldtype": "Int",
+   "label": "Allowed lot size"
+  },
+  {
+   "description": "65 Rs per trade are considered",
+   "fieldname": "charges_till_date",
+   "fieldtype": "Currency",
+   "label": "Charges"
+  },
+  {
+   "fieldname": "gross_result",
+   "fieldtype": "Currency",
+   "label": "Gross Result"
+  },
+  {
+   "fieldname": "net_outcome",
+   "fieldtype": "Currency",
+   "label": "Net Outcome"
+  },
+  {
+   "fieldname": "column_break_ydrsq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "starting_date",
+   "fieldtype": "Date",
+   "label": "Start date"
+  },
+  {
+   "fieldname": "section_break_pnhml",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_krsua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9xgtp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7borw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_rikuk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_c0gnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qubiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End date"
+  },
+  {
+   "fieldname": "trade_summary",
+   "fieldtype": "Table",
+   "label": "Trade Summary",
+   "options": "Trade Summary"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-14 18:57:40.955797",
+ "modified_by": "Administrator",
+ "module": "HSM working",
+ "name": "Trade Journal",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
