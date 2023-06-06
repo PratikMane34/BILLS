@@ -5,6 +5,9 @@ frappe.ui.form.on('Trade Journal', {
 	// refresh: function(frm) {
 
 	// }
+	gross_result:function(frm){
+
+	}
 });
 frappe.ui.form.on('Trade Summary', {
 	refresh(frm) {
@@ -12,26 +15,19 @@ frappe.ui.form.on('Trade Summary', {
 	},
 	sell_value(frm,cdt,cdn){
     var row = locals[cdt][cdn];
-	    console.log("sell_value function called from code")
 	    if(row.sell_value){
-	        console.log("sell value is available from code")
-    	    if(row.buy_value){
-    	        console.log("buy_value is available from code")
-    	        console.log("Calculating captured value from code")
+	  	    if(row.buy_value){
               row.captured_points = row.sell_value - row.buy_value
               row.gross_amount = (row.sell_value - row.buy_value) * row.qty
-              //frappe.model.set_value(cdt,cdn,"captured_points",row.sell_value - row.buy_value);
-              //frappe.model.set_value(cdt,cdn,"gross_amount",(row.sell_value - row.buy_value)*row.qty);
               cur_frm.refresh_fields("captured_points");
               cur_frm.refresh_fields("gross_amount");
-    	        //frappe.set_value(frm.captured_points,frm.sell_value - frm.buy_value)
-
+              cur_frm.refresh_fields("charges_till_date");
     	    }
 
 	    }
 	},
-	captured_points(frm){
-
-	    console.log("captured points are added from code")
-	}
+  qty:function(frm,cdt,cdn){
+    var row = locals[cdt][cdn]
+    frappe.model.set_value(cdt,cdn, 'gross_amount',(row.sell_value - row.buy_value) * row.qty);
+  }
 });
